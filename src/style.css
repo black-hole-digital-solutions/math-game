@@ -1,0 +1,479 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* gameboard */
+.gameBoard {
+  width: 90%;
+  height: 650px;
+  background-image: url(../images/space.jpg);
+  }
+
+  .gameBoard h2 {
+    height: 24px;
+    margin: 0;
+  }
+
+  #gameOver {
+    height: 95px;
+    font-size: 80px;
+    color: yellow;
+    margin-top: 100px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 5px 5px green;
+    display: none;
+  }
+
+
+#player {
+  position: absolute;
+  /* border: black solid 1px; */
+  height: 75px;
+  width: 99px;
+  top: 440px;
+  left: 380px;
+  background-image: url(../images/player1.png);
+  /* background-color: black;
+  border-radius: 50% 50%; */
+}
+
+
+.laser {
+  background-color: green;
+  height: 20px;
+  width: 10px;
+  position: absolute;
+  top: 400px;
+  left: 350px;
+}
+
+.enemy {
+  position: absolute;
+  /* border: black solid 1px; */
+  color: black;
+  font-weight: bold;
+  /* height: 75px;
+  width: 75px; */
+  height: 84px;
+  width: 103px;
+  top: 50px;
+  left: 380px;
+  background-image: url(../images/Enemies/enemyRed3.png);
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+/* console */
+
+.console {
+position: absolute;
+background-color: gray;
+height: 170px;
+width: 90%;
+top: 535px;
+border-top:black solid 3px;
+}
+/* console top section */
+.c-top {
+height: 60px;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
+
+}
+.c-top-left {
+  width: 33%;
+  display:flex;
+}
+
+.c-top-mid {
+  width: 33%;
+  display:flex;
+  justify-content: center;
+}
+
+.c-top-right {
+  width: 33%;
+  display:flex;
+  justify-content: space-around;
+  margin-right: 50px;
+}
+
+.score-container {
+  height: 30px;
+  width: 100px;
+  margin-left: 25px;
+  padding: 0 11px;
+  margin-right: 400px;;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border:black solid 1px;
+}
+
+.currentAnswerContainer {
+  border: solid black 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.answerContainer {
+  border: solid black 5px;
+  display: none;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+}
+#choice-1 {
+  background-color: white;
+}
+
+#choice-2 {
+  background-color: white;
+}
+
+#choice-3 {
+  background-color: white;
+}
+
+.choice {
+  height: 30px;
+  width: 30px;
+  margin: 3px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* border:black solid 1px; */
+}
+
+.choice:hover {
+  cursor: pointer;
+
+}
+
+/* console middle section */
+.c-mid {
+height: 55px;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: flex-start;
+}
+
+.timer-container {
+  height: 30px;
+  width: 100px;
+  margin-left: 25px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border:black solid 1px;
+}
+
+#mid-1 {
+display: flex;
+width: 33%;
+}
+
+
+#mid-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+.selector-container {
+  margin-top: 20px;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: black solid 5px;
+  margin-right: 15px;
+  color: red;
+  font-size: 40px;
+}
+
+#scoreDisplay {
+  margin-left: 3px;
+}
+
+/* console bottom section */
+.c-bottom {
+  height: 55px;
+  display: flex;
+  align-items: center;
+
+}
+
+#restart {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  border-radius: 5px 5px;
+  border: solid black 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+#restart:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+
+/* start-screen */
+
+.start-screen {
+  width: 90%;
+  height: 700px;
+  background-image: url(../images/space.jpg);
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  }
+
+
+.start-screen h1 {
+  height: 95px;
+  font-size: 80px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px green;
+}
+
+  .startscreenbtn {
+    height: 40px;
+    font-size: 40px;
+    margin: 25px;
+    width: 350px;
+    border: solid green 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+
+    .start-screen h2:hover {
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: yellow;
+    }
+
+  #highScore {
+    width: 500px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-shadow: 5px 5px green
+  }
+
+  .start-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .start-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 0;
+  }
+
+/* read me stuff */
+
+  #readMe {
+    width: 50%;
+    height: 500px;
+    border: solid green 2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+   left: 25%;
+   background-color: black;
+   color: yellow;
+   flex-direction: column;
+  }
+
+  #readMe h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #readMe li {
+    list-style: none;
+  }
+  #close-read {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    top:4px;
+    right:18px;
+    position: absolute;
+    border: solid 2px green;
+    padding: 2px;
+  }
+
+/* cheat sheet stuff */
+
+  .cheatsheet {
+    width: 50%;
+    height: 500px;
+    border: solid green 2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+   left: 25%;
+   background-color: black;
+   color: yellow;
+   flex-direction: column;
+  }
+
+
+  .cs-container {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+   flex-direction: row;
+  }
+
+  .cs-container div {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .cheatsheet h2 {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+
+  .cheatsheet li {
+    list-style: none;
+  }
+  .close-cheatsheet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    top:4px;
+    right:18px;
+    position: absolute;
+    border: solid 2px green;
+    padding: 2px;
+  }
+
+  /* cheatsheet menu */
+
+  #cs-Menu {
+    width: 25%;
+    height: 35%;
+    left: 40%;
+    border: solid green 2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+   background-color: black;
+   color: yellow;
+   flex-direction: column;
+  }
+
+  #close-cs-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    top:4px;
+    right:18px;
+    position: absolute;
+    border: solid 2px green;
+    padding: 2px;
+  }
+
+
+
+  /* game mode menu */
+
+
+  #gm-Menu {
+    width: 25%;
+    height: 35%;
+    left: 40%;
+    border: solid green 2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+   background-color: black;
+   color: yellow;
+   flex-direction: column;
+  }
+
+  #close-gm-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    top:4px;
+    right:18px;
+    position: absolute;
+    border: solid 2px green;
+    padding: 2px;
+  }
